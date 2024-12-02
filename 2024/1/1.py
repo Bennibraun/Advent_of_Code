@@ -20,3 +20,4 @@ for i in range(len(n1)):
         dict[n1[i]] = int(n1[i]) * len([x for x in n2 if x == n1[i]])
     dict_sum += dict[n1[i]]
 print(dict_sum)
+

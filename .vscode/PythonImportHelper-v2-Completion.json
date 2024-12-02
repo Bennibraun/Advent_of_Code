@@ -1347,5 +1347,167 @@
         "peekOfCode": "dict_sum = 0\nfor i in range(len(n1)):\n    if n1[i] not in dict:\n        dict[n1[i]] = int(n1[i]) * len([x for x in n2 if x == n1[i]])\n    dict_sum += dict[n1[i]]\nprint(dict_sum)",
         "detail": "2024.1.1",
         "documentation": {}
+    },
+    {
+        "label": "\tmat",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\tmat = []\n\tfor line in file:\n\t\tmat.append([int(x) for x in line.split()])\n# part 1\nsafe_reports = 0\nfor report in mat:\n\tprev = report[0]\n\tdirection = None\n\tfor curr in report[1:]:\n\t\tif curr > prev and 1 <= curr-prev <= 3:",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "safe_reports",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "safe_reports = 0\nfor report in mat:\n\tprev = report[0]\n\tdirection = None\n\tfor curr in report[1:]:\n\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\tprev = curr\n\t\t\tif direction is None:\n\t\t\t\tdirection = 'up'\n\t\t\telse:",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\tprev",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\tprev = report[0]\n\tdirection = None\n\tfor curr in report[1:]:\n\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\tprev = curr\n\t\t\tif direction is None:\n\t\t\t\tdirection = 'up'\n\t\t\telse:\n\t\t\t\tif direction != 'up':\n\t\t\t\t\tbreak",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\tdirection",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\tdirection = None\n\tfor curr in report[1:]:\n\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\tprev = curr\n\t\t\tif direction is None:\n\t\t\t\tdirection = 'up'\n\t\t\telse:\n\t\t\t\tif direction != 'up':\n\t\t\t\t\tbreak\n\t\telif curr < prev and 1 <= prev-curr <= 3:",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tprev",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\tprev = curr\n\t\t\tif direction is None:\n\t\t\t\tdirection = 'up'\n\t\t\telse:\n\t\t\t\tif direction != 'up':\n\t\t\t\t\tbreak\n\t\telif curr < prev and 1 <= prev-curr <= 3:\n\t\t\tprev = curr\n\t\t\tif direction is None:\n\t\t\t\tdirection = 'down'",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tdirection",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\t\tdirection = 'up'\n\t\t\telse:\n\t\t\t\tif direction != 'up':\n\t\t\t\t\tbreak\n\t\telif curr < prev and 1 <= prev-curr <= 3:\n\t\t\tprev = curr\n\t\t\tif direction is None:\n\t\t\t\tdirection = 'down'\n\t\t\telse:\n\t\t\t\tif direction != 'down':",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tprev",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\tprev = curr\n\t\t\tif direction is None:\n\t\t\t\tdirection = 'down'\n\t\t\telse:\n\t\t\t\tif direction != 'down':\n\t\t\t\t\tbreak\n\t\telse:\n\t\t\tbreak\n\telse:\n\t\tsafe_reports += 1",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tdirection",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\t\tdirection = 'down'\n\t\t\telse:\n\t\t\t\tif direction != 'down':\n\t\t\t\t\tbreak\n\t\telse:\n\t\t\tbreak\n\telse:\n\t\tsafe_reports += 1\nprint(safe_reports)\n#part 2",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "safe_reports",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "safe_reports = 0\nfor report in mat:\n\treport_good = False\n\tfor i in range(len(report)):\n\t\treport_aug = report[0:i] + report[i+1:]\n\t\tprev = report_aug[0]\n\t\tdirection = None\n\t\tfor curr in report_aug[1:]:\n\t\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\t\tprev = curr",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\treport_good",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\treport_good = False\n\tfor i in range(len(report)):\n\t\treport_aug = report[0:i] + report[i+1:]\n\t\tprev = report_aug[0]\n\t\tdirection = None\n\t\tfor curr in report_aug[1:]:\n\t\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'up'",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\treport_aug",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\treport_aug = report[0:i] + report[i+1:]\n\t\tprev = report_aug[0]\n\t\tdirection = None\n\t\tfor curr in report_aug[1:]:\n\t\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'up'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'up':",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tprev",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\tprev = report_aug[0]\n\t\tdirection = None\n\t\tfor curr in report_aug[1:]:\n\t\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'up'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'up':\n\t\t\t\t\t\tbreak",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tdirection",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\tdirection = None\n\t\tfor curr in report_aug[1:]:\n\t\t\tif curr > prev and 1 <= curr-prev <= 3:\n\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'up'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'up':\n\t\t\t\t\t\tbreak\n\t\t\telif curr < prev and 1 <= prev-curr <= 3:",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tprev",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'up'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'up':\n\t\t\t\t\t\tbreak\n\t\t\telif curr < prev and 1 <= prev-curr <= 3:\n\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'down'",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tdirection",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\t\t\tdirection = 'up'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'up':\n\t\t\t\t\t\tbreak\n\t\t\telif curr < prev and 1 <= prev-curr <= 3:\n\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'down'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'down':",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tprev",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\t\tprev = curr\n\t\t\t\tif direction is None:\n\t\t\t\t\tdirection = 'down'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'down':\n\t\t\t\t\t\tbreak\n\t\t\telse:\n\t\t\t\tbreak\n\t\telse:\n\t\t\treport_good = True",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tdirection",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\t\t\tdirection = 'down'\n\t\t\t\telse:\n\t\t\t\t\tif direction != 'down':\n\t\t\t\t\t\tbreak\n\t\t\telse:\n\t\t\t\tbreak\n\t\telse:\n\t\t\treport_good = True\n\tif report_good:\n\t\tsafe_reports += 1",
+        "detail": "2024.2.2",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\treport_good",
+        "kind": 5,
+        "importPath": "2024.2.2",
+        "description": "2024.2.2",
+        "peekOfCode": "\t\t\treport_good = True\n\tif report_good:\n\t\tsafe_reports += 1\nprint(safe_reports)",
+        "detail": "2024.2.2",
+        "documentation": {}
     }
 ]
