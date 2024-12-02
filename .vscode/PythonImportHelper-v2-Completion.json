@@ -1,0 +1,1351 @@
+[
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "permutations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "find_error",
+        "kind": 2,
+        "importPath": "2021.10.10.2",
+        "description": "2021.10.10.2",
+        "peekOfCode": "def find_error(line):\n    stack = []\n    open_b = ['(', '[', '{', '<']\n    close_b = [')', ']', '}', '>']\n    for char in line:\n        if char in open_b:\n            stack.append(char)\n        elif char in close_b:\n            pos = close_b.index(char)\n            if len(stack) > 0 and open_b[pos] == stack[-1]:",
+        "detail": "2021.10.10.2",
+        "documentation": {}
+    },
+    {
+        "label": "auto_complete",
+        "kind": 2,
+        "importPath": "2021.10.10.2",
+        "description": "2021.10.10.2",
+        "peekOfCode": "def auto_complete(line):\n    value = {')': 1, ']': 2, '}': 3, '>': 4}\n    stack = []\n    open_b = ['(', '[', '{', '<']\n    close_b = [')', ']', '}', '>']\n    completion = ''\n    for char in line:\n        if char in open_b:\n            stack.append(char)\n        elif char in close_b:",
+        "detail": "2021.10.10.2",
+        "documentation": {}
+    },
+    {
+        "label": "find_error",
+        "kind": 2,
+        "importPath": "2021.10.10",
+        "description": "2021.10.10",
+        "peekOfCode": "def find_error(line):\n    stack = []\n    open_b = ['(', '[', '{', '<']\n    close_b = [')', ']', '}', '>']\n    value = {')': 3, ']': 57, '}': 1197, '>': 25137}\n    for char in line:\n        if char in open_b:\n            stack.append(char)\n        elif char in close_b:\n            pos = close_b.index(char)",
+        "detail": "2021.10.10",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "kind": 2,
+        "importPath": "2021.11.11.1",
+        "description": "2021.11.11.1",
+        "peekOfCode": "def flash(r,c):\n    global octos\n    global count\n    global flashed\n    if [r,c] in flashed:\n        return\n    count += 1\n    octos[r][c] = 0\n    flashed.append([r,c])\n    for rs in range(r-1,r+2):",
+        "detail": "2021.11.11.1",
+        "documentation": {}
+    },
+    {
+        "label": "step",
+        "kind": 2,
+        "importPath": "2021.11.11.1",
+        "description": "2021.11.11.1",
+        "peekOfCode": "def step():\n    global octos\n    flash_locs = []\n    for r in range(len(octos)):\n        for c in range(len(octos[0])):\n            octos[r][c] += 1\n            if octos[r][c] > 9:\n                flash_locs.append([r,c])\n    for (r,c) in flash_locs:\n        flash(r,c)",
+        "detail": "2021.11.11.1",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "2021.11.11.1",
+        "description": "2021.11.11.1",
+        "peekOfCode": "count = 0\nflashed = []\nfor i in range(500):\n    flashed = []\n    step()\nprint(count)",
+        "detail": "2021.11.11.1",
+        "documentation": {}
+    },
+    {
+        "label": "flashed",
+        "kind": 5,
+        "importPath": "2021.11.11.1",
+        "description": "2021.11.11.1",
+        "peekOfCode": "flashed = []\nfor i in range(500):\n    flashed = []\n    step()\nprint(count)",
+        "detail": "2021.11.11.1",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "kind": 2,
+        "importPath": "2021.11.11.2",
+        "description": "2021.11.11.2",
+        "peekOfCode": "def flash(r,c):\n    global octos\n    global count\n    global flashed\n    if [r,c] in flashed:\n        return\n    count += 1\n    octos[r][c] = 0\n    flashed.append([r,c])\n    for rs in range(r-1,r+2):",
+        "detail": "2021.11.11.2",
+        "documentation": {}
+    },
+    {
+        "label": "step",
+        "kind": 2,
+        "importPath": "2021.11.11.2",
+        "description": "2021.11.11.2",
+        "peekOfCode": "def step():\n    global octos\n    flash_locs = []\n    for r in range(len(octos)):\n        for c in range(len(octos[0])):\n            octos[r][c] += 1\n            if octos[r][c] > 9:\n                flash_locs.append([r,c])\n    for (r,c) in flash_locs:\n        flash(r,c)",
+        "detail": "2021.11.11.2",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "2021.11.11.2",
+        "description": "2021.11.11.2",
+        "peekOfCode": "count = 0\nflashed = []\nfor i in range(500):\n    flashed = []\n    step()\n    if len(flashed) == len(octos) * len(octos[0]):\n        print(i+1)\n        break",
+        "detail": "2021.11.11.2",
+        "documentation": {}
+    },
+    {
+        "label": "flashed",
+        "kind": 5,
+        "importPath": "2021.11.11.2",
+        "description": "2021.11.11.2",
+        "peekOfCode": "flashed = []\nfor i in range(500):\n    flashed = []\n    step()\n    if len(flashed) == len(octos) * len(octos[0]):\n        print(i+1)\n        break",
+        "detail": "2021.11.11.2",
+        "documentation": {}
+    },
+    {
+        "label": "next_cave",
+        "kind": 2,
+        "importPath": "2021.12.12.1",
+        "description": "2021.12.12.1",
+        "peekOfCode": "def next_cave(m):\n    if m[-1] == 'end':\n        yield m\n    else:\n        for j in i:\n            # if first path is current cave, take second path\n            if j[0] == m[-1]:\n                # small cave\n                if j[1].islower():\n                    # take path",
+        "detail": "2021.12.12.1",
+        "documentation": {}
+    },
+    {
+        "label": "i",
+        "kind": 5,
+        "importPath": "2021.12.12.1",
+        "description": "2021.12.12.1",
+        "peekOfCode": "i = []\npaths = []\n# Part 1\ntrack = [True, 'start']\n# Part 2\ntrack = [False, 'start']\nfor line in open(\"12.1.txt\"):\n    line = line.replace('\\n','')\n    i += [line.split('-')]\n# generators are cool",
+        "detail": "2021.12.12.1",
+        "documentation": {}
+    },
+    {
+        "label": "paths",
+        "kind": 5,
+        "importPath": "2021.12.12.1",
+        "description": "2021.12.12.1",
+        "peekOfCode": "paths = []\n# Part 1\ntrack = [True, 'start']\n# Part 2\ntrack = [False, 'start']\nfor line in open(\"12.1.txt\"):\n    line = line.replace('\\n','')\n    i += [line.split('-')]\n# generators are cool\ndef next_cave(m):",
+        "detail": "2021.12.12.1",
+        "documentation": {}
+    },
+    {
+        "label": "track",
+        "kind": 5,
+        "importPath": "2021.12.12.1",
+        "description": "2021.12.12.1",
+        "peekOfCode": "track = [True, 'start']\n# Part 2\ntrack = [False, 'start']\nfor line in open(\"12.1.txt\"):\n    line = line.replace('\\n','')\n    i += [line.split('-')]\n# generators are cool\ndef next_cave(m):\n    if m[-1] == 'end':\n        yield m",
+        "detail": "2021.12.12.1",
+        "documentation": {}
+    },
+    {
+        "label": "track",
+        "kind": 5,
+        "importPath": "2021.12.12.1",
+        "description": "2021.12.12.1",
+        "peekOfCode": "track = [False, 'start']\nfor line in open(\"12.1.txt\"):\n    line = line.replace('\\n','')\n    i += [line.split('-')]\n# generators are cool\ndef next_cave(m):\n    if m[-1] == 'end':\n        yield m\n    else:\n        for j in i:",
+        "detail": "2021.12.12.1",
+        "documentation": {}
+    },
+    {
+        "label": "fold",
+        "kind": 2,
+        "importPath": "2021.13.13",
+        "description": "2021.13.13",
+        "peekOfCode": "def fold(dots, f, i):\n    new_dots = set()\n    for dot in [list(d) for d in dots]:\n        if dot[i] > f:\n            dot[i] -= (dot[i] - f) * 2\n        new_dots.add(tuple(dot))\n    return new_dots\nfor f in folds:\n    paper = fold(paper, f[1], f[0] == 'y')\n# print(len(paper))",
+        "detail": "2021.13.13",
+        "documentation": {}
+    },
+    {
+        "label": "print_dots",
+        "kind": 2,
+        "importPath": "2021.13.13",
+        "description": "2021.13.13",
+        "peekOfCode": "def print_dots(dots):\n    y_max = max(map(lambda d: d[1], dots))\n    x_max = max(map(lambda d: d[0], dots))\n    for y in range(y_max+1):\n        print(''.join(['#' if (x,y) in dots else '.' for x in range(x_max+1)]))\nprint_dots(paper)",
+        "detail": "2021.13.13",
+        "documentation": {}
+    },
+    {
+        "label": "inser",
+        "kind": 2,
+        "importPath": "2021.14.14",
+        "description": "2021.14.14",
+        "peekOfCode": "def insert (source_str, insert_str, pos):\n    return source_str[:pos]+insert_str+source_str[pos:]\ndef step(polymer):\n    new_polymer = polymer\n    np = 1\n    for p in range(len(polymer) - 1):\n        # print(new_polymer)\n        pair = polymer[p:p + 2]\n        if pair in rules.keys():\n            new_polymer = insert(new_polymer, rules[pair], np)",
+        "detail": "2021.14.14",
+        "documentation": {}
+    },
+    {
+        "label": "step",
+        "kind": 2,
+        "importPath": "2021.14.14",
+        "description": "2021.14.14",
+        "peekOfCode": "def step(polymer):\n    new_polymer = polymer\n    np = 1\n    for p in range(len(polymer) - 1):\n        # print(new_polymer)\n        pair = polymer[p:p + 2]\n        if pair in rules.keys():\n            new_polymer = insert(new_polymer, rules[pair], np)\n            np += 1\n        np += 1",
+        "detail": "2021.14.14",
+        "documentation": {}
+    },
+    {
+        "label": "step_c",
+        "kind": 2,
+        "importPath": "2021.14.14",
+        "description": "2021.14.14",
+        "peekOfCode": "def step_c(counts,letters):\n    new_counts = counts.copy()\n    for pair in counts.keys():\n        if pair in rules.keys():\n            # print('removing', pair)\n            new_counts[pair] -= counts[pair]\n            # print('adding',pair[0]+rules[pair])\n            new_counts[pair[0]+rules[pair]] += counts[pair]\n            # print('adding',rules[pair]+pair[1])\n            new_counts[rules[pair]+pair[1]] += counts[pair]",
+        "detail": "2021.14.14",
+        "documentation": {}
+    },
+    {
+        "label": "counts",
+        "kind": 5,
+        "importPath": "2021.14.14",
+        "description": "2021.14.14",
+        "peekOfCode": "counts = rules.copy()\nletters = {'A':0,'B':0,'C':0,'D':0,'E':0,'F':0,'G':0,'H':0,'I':0,'J':0,'K':0,'L':0,'M':0,'N':0,'O':0,'P':0,'Q':0,'R':0,'S':0,'T':0,'U':0,'V':0,'W':0,'X':0,'Y':0,'Z':0}\nfor l in polymer:\n    letters[l] += 1\nfor key in counts.keys():\n    counts[key] = polymer.count(key)\n# print(counts)\nfor i in range(40):\n    counts,letters = step_c(counts,letters)\n    # print(counts)",
+        "detail": "2021.14.14",
+        "documentation": {}
+    },
+    {
+        "label": "letters",
+        "kind": 5,
+        "importPath": "2021.14.14",
+        "description": "2021.14.14",
+        "peekOfCode": "letters = {'A':0,'B':0,'C':0,'D':0,'E':0,'F':0,'G':0,'H':0,'I':0,'J':0,'K':0,'L':0,'M':0,'N':0,'O':0,'P':0,'Q':0,'R':0,'S':0,'T':0,'U':0,'V':0,'W':0,'X':0,'Y':0,'Z':0}\nfor l in polymer:\n    letters[l] += 1\nfor key in counts.keys():\n    counts[key] = polymer.count(key)\n# print(counts)\nfor i in range(40):\n    counts,letters = step_c(counts,letters)\n    # print(counts)\nletters = {key:value for key,value in letters.items() if value > 0}",
+        "detail": "2021.14.14",
+        "documentation": {}
+    },
+    {
+        "label": "letters",
+        "kind": 5,
+        "importPath": "2021.14.14",
+        "description": "2021.14.14",
+        "peekOfCode": "letters = {key:value for key,value in letters.items() if value > 0}\nprint(letters)\nprint(max(letters.values()))\nprint(min(letters.values()))\nprint(max(letters.values())-min(letters.values()))",
+        "detail": "2021.14.14",
+        "documentation": {}
+    },
+    {
+        "label": "djikstra",
+        "kind": 2,
+        "importPath": "2021.15.15",
+        "description": "2021.15.15",
+        "peekOfCode": "def djikstra(grid, cur, visited, shortest_paths):\n    print('started 8:48')\n    while cur != (len(grid[0])-1,len(grid)-1):\n        visited.add(cur)\n        dest = []\n        if cur[0] > 0 and (cur[0]-1,cur[1]) not in visited:\n            dest.append((cur[0]-1,cur[1]))\n        if cur[0] < len(grid[0])-1 and (cur[0]+1,cur[1]) not in visited:\n            dest.append((cur[0]+1,cur[1]))\n        if cur[1] > 0 and (cur[0],cur[1]-1) not in visited:",
+        "detail": "2021.15.15",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "kind": 5,
+        "importPath": "2021.15.15",
+        "description": "2021.15.15",
+        "peekOfCode": "g = len(grid)\nfull_grid = [[0]*(5*g) for _ in range(5*g)]\nfor i in range(5):\n    for j in range(5):\n        for r in range(g):\n            for c in range(g):\n                val = grid[r][c]+i+j\n                if val > 9:\n                    val = val%10 + 1\n                full_grid[(i*g)+r][(j*g)+c] = val",
+        "detail": "2021.15.15",
+        "documentation": {}
+    },
+    {
+        "label": "full_grid",
+        "kind": 5,
+        "importPath": "2021.15.15",
+        "description": "2021.15.15",
+        "peekOfCode": "full_grid = [[0]*(5*g) for _ in range(5*g)]\nfor i in range(5):\n    for j in range(5):\n        for r in range(g):\n            for c in range(g):\n                val = grid[r][c]+i+j\n                if val > 9:\n                    val = val%10 + 1\n                full_grid[(i*g)+r][(j*g)+c] = val\ndef djikstra(grid, cur, visited, shortest_paths):",
+        "detail": "2021.15.15",
+        "documentation": {}
+    },
+    {
+        "label": "cur",
+        "kind": 5,
+        "importPath": "2021.15.15",
+        "description": "2021.15.15",
+        "peekOfCode": "cur = (0,0)\nshortest_paths = {(0,0): (None, 0)}\nvisited = set()\n# path = djikstra(grid, cur, visited, shortest_paths)\n# print(sum([grid[x[0]][x[1]] for x in path])-grid[0][0])\npath = djikstra(full_grid, cur, visited, shortest_paths)\nprint(sum([full_grid[x[0]][x[1]] for x in path])-full_grid[0][0])",
+        "detail": "2021.15.15",
+        "documentation": {}
+    },
+    {
+        "label": "shortest_paths",
+        "kind": 5,
+        "importPath": "2021.15.15",
+        "description": "2021.15.15",
+        "peekOfCode": "shortest_paths = {(0,0): (None, 0)}\nvisited = set()\n# path = djikstra(grid, cur, visited, shortest_paths)\n# print(sum([grid[x[0]][x[1]] for x in path])-grid[0][0])\npath = djikstra(full_grid, cur, visited, shortest_paths)\nprint(sum([full_grid[x[0]][x[1]] for x in path])-full_grid[0][0])",
+        "detail": "2021.15.15",
+        "documentation": {}
+    },
+    {
+        "label": "visited",
+        "kind": 5,
+        "importPath": "2021.15.15",
+        "description": "2021.15.15",
+        "peekOfCode": "visited = set()\n# path = djikstra(grid, cur, visited, shortest_paths)\n# print(sum([grid[x[0]][x[1]] for x in path])-grid[0][0])\npath = djikstra(full_grid, cur, visited, shortest_paths)\nprint(sum([full_grid[x[0]][x[1]] for x in path])-full_grid[0][0])",
+        "detail": "2021.15.15",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "2021.15.15",
+        "description": "2021.15.15",
+        "peekOfCode": "path = djikstra(full_grid, cur, visited, shortest_paths)\nprint(sum([full_grid[x[0]][x[1]] for x in path])-full_grid[0][0])",
+        "detail": "2021.15.15",
+        "documentation": {}
+    },
+    {
+        "label": "parse_packet",
+        "kind": 2,
+        "importPath": "2021.16.16",
+        "description": "2021.16.16",
+        "peekOfCode": "def parse_packet(data,cur):\n    global version_sum\n    V = int(data[cur:cur+3],2)\n    version_sum += V\n    cur += 3\n    T = int(data[cur:cur+3],2)\n    cur += 3\n    val = 0\n    if T==4:\n        #literal value",
+        "detail": "2021.16.16",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "2021.16.16",
+        "description": "2021.16.16",
+        "peekOfCode": "data = bin(int('1'+data,16))[3:]\nversion_sum = 0\ncur = 0\nwhile cur < len(data)-1 and int(data[cur:],2) != 0:   \n    cur, val = parse_packet(data,cur)\nprint(version_sum)\nprint(val)",
+        "detail": "2021.16.16",
+        "documentation": {}
+    },
+    {
+        "label": "version_sum",
+        "kind": 5,
+        "importPath": "2021.16.16",
+        "description": "2021.16.16",
+        "peekOfCode": "version_sum = 0\ncur = 0\nwhile cur < len(data)-1 and int(data[cur:],2) != 0:   \n    cur, val = parse_packet(data,cur)\nprint(version_sum)\nprint(val)",
+        "detail": "2021.16.16",
+        "documentation": {}
+    },
+    {
+        "label": "cur",
+        "kind": 5,
+        "importPath": "2021.16.16",
+        "description": "2021.16.16",
+        "peekOfCode": "cur = 0\nwhile cur < len(data)-1 and int(data[cur:],2) != 0:   \n    cur, val = parse_packet(data,cur)\nprint(version_sum)\nprint(val)",
+        "detail": "2021.16.16",
+        "documentation": {}
+    },
+    {
+        "label": "is_in_target",
+        "kind": 2,
+        "importPath": "2021.17.17",
+        "description": "2021.17.17",
+        "peekOfCode": "def is_in_target(x,y):\n    return t_x1 <= x <= t_x2 and t_y1 <= y <= t_y2\nhighest_y = 0\ncount = 0\nfor i in range(0,2000):\n    for j in range(-500,2000):\n        xv = i\n        yv = j\n        x,y = 0,0\n        local_highest_y = 0",
+        "detail": "2021.17.17",
+        "documentation": {}
+    },
+    {
+        "label": "t_x1",
+        "kind": 5,
+        "importPath": "2021.17.17",
+        "description": "2021.17.17",
+        "peekOfCode": "t_x1 = 169\nt_x2 = 206\nt_y1 = -108\nt_y2 = -68\ndef is_in_target(x,y):\n    return t_x1 <= x <= t_x2 and t_y1 <= y <= t_y2\nhighest_y = 0\ncount = 0\nfor i in range(0,2000):\n    for j in range(-500,2000):",
+        "detail": "2021.17.17",
+        "documentation": {}
+    },
+    {
+        "label": "t_x2",
+        "kind": 5,
+        "importPath": "2021.17.17",
+        "description": "2021.17.17",
+        "peekOfCode": "t_x2 = 206\nt_y1 = -108\nt_y2 = -68\ndef is_in_target(x,y):\n    return t_x1 <= x <= t_x2 and t_y1 <= y <= t_y2\nhighest_y = 0\ncount = 0\nfor i in range(0,2000):\n    for j in range(-500,2000):\n        xv = i",
+        "detail": "2021.17.17",
+        "documentation": {}
+    },
+    {
+        "label": "t_y1",
+        "kind": 5,
+        "importPath": "2021.17.17",
+        "description": "2021.17.17",
+        "peekOfCode": "t_y1 = -108\nt_y2 = -68\ndef is_in_target(x,y):\n    return t_x1 <= x <= t_x2 and t_y1 <= y <= t_y2\nhighest_y = 0\ncount = 0\nfor i in range(0,2000):\n    for j in range(-500,2000):\n        xv = i\n        yv = j",
+        "detail": "2021.17.17",
+        "documentation": {}
+    },
+    {
+        "label": "t_y2",
+        "kind": 5,
+        "importPath": "2021.17.17",
+        "description": "2021.17.17",
+        "peekOfCode": "t_y2 = -68\ndef is_in_target(x,y):\n    return t_x1 <= x <= t_x2 and t_y1 <= y <= t_y2\nhighest_y = 0\ncount = 0\nfor i in range(0,2000):\n    for j in range(-500,2000):\n        xv = i\n        yv = j\n        x,y = 0,0",
+        "detail": "2021.17.17",
+        "documentation": {}
+    },
+    {
+        "label": "highest_y",
+        "kind": 5,
+        "importPath": "2021.17.17",
+        "description": "2021.17.17",
+        "peekOfCode": "highest_y = 0\ncount = 0\nfor i in range(0,2000):\n    for j in range(-500,2000):\n        xv = i\n        yv = j\n        x,y = 0,0\n        local_highest_y = 0\n        while (not is_in_target(x,y)) and x<=t_x2 and y>=t_y1:\n            x += xv",
+        "detail": "2021.17.17",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "2021.17.17",
+        "description": "2021.17.17",
+        "peekOfCode": "count = 0\nfor i in range(0,2000):\n    for j in range(-500,2000):\n        xv = i\n        yv = j\n        x,y = 0,0\n        local_highest_y = 0\n        while (not is_in_target(x,y)) and x<=t_x2 and y>=t_y1:\n            x += xv\n            if xv > 0:",
+        "detail": "2021.17.17",
+        "documentation": {}
+    },
+    {
+        "label": "inv",
+        "kind": 2,
+        "importPath": "2021.19_22.22",
+        "description": "2021.19_22.22",
+        "peekOfCode": "def inv(a,m):\n    return pow(a,m-2,m)\n# Find a card\na_d = pow(a,d,m)\nb_d = ((b * (a_d-1)) * inv(a-1,m)) % m\nprint((a_d*card+b_d)%m)\n# Find a position\nprint(((card-b_d) * inv(a_d,m)) % m)",
+        "detail": "2021.19_22.22",
+        "documentation": {}
+    },
+    {
+        "label": "card",
+        "kind": 5,
+        "importPath": "2021.19_22.22",
+        "description": "2021.19_22.22",
+        "peekOfCode": "card = 2020\nm = 119315717514047 # of cards\nd = 101741582076661 # of shuffles\n# def increment(card,incr):\n#     return (incr*card)%m\n# def cut(card,x):\n#     return (card-x)%m\n# def stack(card):\n#     return (-(card+1))%m\na,b = 1,0",
+        "detail": "2021.19_22.22",
+        "documentation": {}
+    },
+    {
+        "label": "m",
+        "kind": 5,
+        "importPath": "2021.19_22.22",
+        "description": "2021.19_22.22",
+        "peekOfCode": "m = 119315717514047 # of cards\nd = 101741582076661 # of shuffles\n# def increment(card,incr):\n#     return (incr*card)%m\n# def cut(card,x):\n#     return (card-x)%m\n# def stack(card):\n#     return (-(card+1))%m\na,b = 1,0\nwith open('22.1.txt', 'r') as f:",
+        "detail": "2021.19_22.22",
+        "documentation": {}
+    },
+    {
+        "label": "d",
+        "kind": 5,
+        "importPath": "2021.19_22.22",
+        "description": "2021.19_22.22",
+        "peekOfCode": "d = 101741582076661 # of shuffles\n# def increment(card,incr):\n#     return (incr*card)%m\n# def cut(card,x):\n#     return (card-x)%m\n# def stack(card):\n#     return (-(card+1))%m\na,b = 1,0\nwith open('22.1.txt', 'r') as f:\n    for line in f:",
+        "detail": "2021.19_22.22",
+        "documentation": {}
+    },
+    {
+        "label": "a,b",
+        "kind": 5,
+        "importPath": "2021.19_22.22",
+        "description": "2021.19_22.22",
+        "peekOfCode": "a,b = 1,0\nwith open('22.1.txt', 'r') as f:\n    for line in f:\n        line = line.strip()\n        if 'increment' in line:\n            i = int(line.split(' ')[-1])\n            a = (i * a) % m\n            b = (i * b) % m\n        elif 'cut' in line:\n            c = int(line.split(' ')[-1])",
+        "detail": "2021.19_22.22",
+        "documentation": {}
+    },
+    {
+        "label": "a_d",
+        "kind": 5,
+        "importPath": "2021.19_22.22",
+        "description": "2021.19_22.22",
+        "peekOfCode": "a_d = pow(a,d,m)\nb_d = ((b * (a_d-1)) * inv(a-1,m)) % m\nprint((a_d*card+b_d)%m)\n# Find a position\nprint(((card-b_d) * inv(a_d,m)) % m)",
+        "detail": "2021.19_22.22",
+        "documentation": {}
+    },
+    {
+        "label": "b_d",
+        "kind": 5,
+        "importPath": "2021.19_22.22",
+        "description": "2021.19_22.22",
+        "peekOfCode": "b_d = ((b * (a_d-1)) * inv(a-1,m)) % m\nprint((a_d*card+b_d)%m)\n# Find a position\nprint(((card-b_d) * inv(a_d,m)) % m)",
+        "detail": "2021.19_22.22",
+        "documentation": {}
+    },
+    {
+        "label": "add_num",
+        "kind": 2,
+        "importPath": "2021.4.4.1",
+        "description": "2021.4.4.1",
+        "peekOfCode": "def add_num(n):\n    for board in boards:\n            for row in board:\n                for i in row:\n                    if i[0] == n:\n                        i[1] = True\n                        if board_wins(board):\n                            print(n)\n                            print(score(board,n))\n                            exit()",
+        "detail": "2021.4.4.1",
+        "documentation": {}
+    },
+    {
+        "label": "transpose",
+        "kind": 2,
+        "importPath": "2021.4.4.1",
+        "description": "2021.4.4.1",
+        "peekOfCode": "def transpose(l1):\n    l2 =[[row[i] for row in l1] for i in range(len(l1[0]))]\n    return l2\ndef board_wins(board):\n    for row in board:\n        if all(flag==True for (_,flag) in row):\n            print('winning row:',row)\n            return True\n    T_board = transpose(board)\n    for row in T_board:",
+        "detail": "2021.4.4.1",
+        "documentation": {}
+    },
+    {
+        "label": "board_wins",
+        "kind": 2,
+        "importPath": "2021.4.4.1",
+        "description": "2021.4.4.1",
+        "peekOfCode": "def board_wins(board):\n    for row in board:\n        if all(flag==True for (_,flag) in row):\n            print('winning row:',row)\n            return True\n    T_board = transpose(board)\n    for row in T_board:\n        if all(flag==True for (_,flag) in row):\n            print('winning col:',row)\n            return True",
+        "detail": "2021.4.4.1",
+        "documentation": {}
+    },
+    {
+        "label": "score",
+        "kind": 2,
+        "importPath": "2021.4.4.1",
+        "description": "2021.4.4.1",
+        "peekOfCode": "def score(board,last):\n    total = 0\n    for row in board:\n        total += sum([x[0] if not x[1] else 0 for x in row])\n    return total*last\nwith open('4.1.1.txt', 'r') as f:\n    nums = [int(n) for n in f.readline().split(',')]\n    boards = [[]]\n    i = 0\n    f.readline()",
+        "detail": "2021.4.4.1",
+        "documentation": {}
+    },
+    {
+        "label": "add_num",
+        "kind": 2,
+        "importPath": "2021.4.4.2",
+        "description": "2021.4.4.2",
+        "peekOfCode": "def add_num(n):\n    remove_boards = []\n    for board in boards:\n        for row in board:\n            for i in row:\n                if i[0] == n:\n                    # if n == 16:\n                    #     for row in board:\n                    #         print(row)\n                    i[1] = True",
+        "detail": "2021.4.4.2",
+        "documentation": {}
+    },
+    {
+        "label": "transpose",
+        "kind": 2,
+        "importPath": "2021.4.4.2",
+        "description": "2021.4.4.2",
+        "peekOfCode": "def transpose(l1):\n    l2 =[[row[i] for row in l1] for i in range(len(l1[0]))]\n    return l2\ndef board_wins(board):\n    for row in board:\n        if all(flag==True for (_,flag) in row):\n            # print('winning row:',row)\n            return True\n    T_board = transpose(board)\n    for row in T_board:",
+        "detail": "2021.4.4.2",
+        "documentation": {}
+    },
+    {
+        "label": "board_wins",
+        "kind": 2,
+        "importPath": "2021.4.4.2",
+        "description": "2021.4.4.2",
+        "peekOfCode": "def board_wins(board):\n    for row in board:\n        if all(flag==True for (_,flag) in row):\n            # print('winning row:',row)\n            return True\n    T_board = transpose(board)\n    for row in T_board:\n        if all(flag==True for (_,flag) in row):\n            # print('winning col:',row)\n            return True",
+        "detail": "2021.4.4.2",
+        "documentation": {}
+    },
+    {
+        "label": "score",
+        "kind": 2,
+        "importPath": "2021.4.4.2",
+        "description": "2021.4.4.2",
+        "peekOfCode": "def score(board,last):\n    total = 0\n    for row in board:\n        total += sum([x[0] if not x[1] else 0 for x in row])\n    print(total,last)\n    return total*last\nwith open('4.1.txt', 'r') as f:\n    nums = [int(n) for n in f.readline().split(',')]\n    boards = [[]]\n    i = 0",
+        "detail": "2021.4.4.2",
+        "documentation": {}
+    },
+    {
+        "label": "transpose",
+        "kind": 2,
+        "importPath": "2021.5.5.1",
+        "description": "2021.5.5.1",
+        "peekOfCode": "def transpose(l1):\n    l2 =[[row[i] for row in l1] for i in range(len(l1[0]))]\n    return l2\ndef add_line(board,line):\n    if line[0]==line[2]:\n        x = line[0]\n        y1 = min(line[1],line[3])\n        y2 = max(line[1],line[3])\n        for y in range(y1,y2+1):\n            board[x][y] += 1",
+        "detail": "2021.5.5.1",
+        "documentation": {}
+    },
+    {
+        "label": "add_line",
+        "kind": 2,
+        "importPath": "2021.5.5.1",
+        "description": "2021.5.5.1",
+        "peekOfCode": "def add_line(board,line):\n    if line[0]==line[2]:\n        x = line[0]\n        y1 = min(line[1],line[3])\n        y2 = max(line[1],line[3])\n        for y in range(y1,y2+1):\n            board[x][y] += 1\n    elif line[1]==line[3]:\n        y = line[1]\n        x1 = min(line[0],line[2])",
+        "detail": "2021.5.5.1",
+        "documentation": {}
+    },
+    {
+        "label": "transpose",
+        "kind": 2,
+        "importPath": "2021.5.5.2",
+        "description": "2021.5.5.2",
+        "peekOfCode": "def transpose(l1):\n    l2 =[[row[i] for row in l1] for i in range(len(l1[0]))]\n    return l2\ndef add_line(board,line):\n    if line[0]==line[2]:\n        x = line[0]\n        y1 = min(line[1],line[3])\n        y2 = max(line[1],line[3])\n        for y in range(y1,y2+1):\n            board[y][x] += 1",
+        "detail": "2021.5.5.2",
+        "documentation": {}
+    },
+    {
+        "label": "add_line",
+        "kind": 2,
+        "importPath": "2021.5.5.2",
+        "description": "2021.5.5.2",
+        "peekOfCode": "def add_line(board,line):\n    if line[0]==line[2]:\n        x = line[0]\n        y1 = min(line[1],line[3])\n        y2 = max(line[1],line[3])\n        for y in range(y1,y2+1):\n            board[y][x] += 1\n    elif line[1]==line[3]:\n        y = line[1]\n        x1 = min(line[0],line[2])",
+        "detail": "2021.5.5.2",
+        "documentation": {}
+    },
+    {
+        "label": "fish",
+        "kind": 5,
+        "importPath": "2021.6.6.1",
+        "description": "2021.6.6.1",
+        "peekOfCode": "fish = [int(f) for f in fish]\nprint('Initial state: ', fish)\nn = 80\nfor day in range(1,n+1):\n    for f in range(len(fish)):\n        if fish[f] == 0:\n            fish.append(8)\n            fish[f] = 6\n        else:\n            fish[f] -= 1",
+        "detail": "2021.6.6.1",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "2021.6.6.1",
+        "description": "2021.6.6.1",
+        "peekOfCode": "n = 80\nfor day in range(1,n+1):\n    for f in range(len(fish)):\n        if fish[f] == 0:\n            fish.append(8)\n            fish[f] = 6\n        else:\n            fish[f] -= 1\n    # print('after ', day, ' day(s): ',fish)\nprint(len(fish))",
+        "detail": "2021.6.6.1",
+        "documentation": {}
+    },
+    {
+        "label": "fish",
+        "kind": 5,
+        "importPath": "2021.6.6.2",
+        "description": "2021.6.6.2",
+        "peekOfCode": "fish = [int(f) for f in fish]\nfish_counts = [0]*9\nfor f in fish:\n    fish_counts[f] += 1\nn = 256\nfor day in range(1,n+1):\n    new_fish = fish_counts[0]\n    for i in range(0,8):\n        fish_counts[i] = fish_counts[i+1]\n    fish_counts[8] = new_fish",
+        "detail": "2021.6.6.2",
+        "documentation": {}
+    },
+    {
+        "label": "fish_counts",
+        "kind": 5,
+        "importPath": "2021.6.6.2",
+        "description": "2021.6.6.2",
+        "peekOfCode": "fish_counts = [0]*9\nfor f in fish:\n    fish_counts[f] += 1\nn = 256\nfor day in range(1,n+1):\n    new_fish = fish_counts[0]\n    for i in range(0,8):\n        fish_counts[i] = fish_counts[i+1]\n    fish_counts[8] = new_fish\n    fish_counts[6] += new_fish",
+        "detail": "2021.6.6.2",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "2021.6.6.2",
+        "description": "2021.6.6.2",
+        "peekOfCode": "n = 256\nfor day in range(1,n+1):\n    new_fish = fish_counts[0]\n    for i in range(0,8):\n        fish_counts[i] = fish_counts[i+1]\n    fish_counts[8] = new_fish\n    fish_counts[6] += new_fish\n    # print(fish_counts)\n    # [5,3,4,2,3,4,5,7,4]\n    # [3,4,2,3,4,5,7+5,4,5]",
+        "detail": "2021.6.6.2",
+        "documentation": {}
+    },
+    {
+        "label": "steps",
+        "kind": 5,
+        "importPath": "2021.7.7.1",
+        "description": "2021.7.7.1",
+        "peekOfCode": "steps = [sum(list(range(1,n))) for n in range(2,max(crabs)+3)]\nprint(steps)\nmin_fuel = 100000000000\nfor pos in range(min(crabs),max(crabs)+1):\n    fuel = 0\n    for crab in crabs:\n        fuel += steps[abs(crab-pos)-1]\n    if fuel < min_fuel:\n        min_fuel = fuel\nprint(min_fuel)",
+        "detail": "2021.7.7.1",
+        "documentation": {}
+    },
+    {
+        "label": "min_fuel",
+        "kind": 5,
+        "importPath": "2021.7.7.1",
+        "description": "2021.7.7.1",
+        "peekOfCode": "min_fuel = 100000000000\nfor pos in range(min(crabs),max(crabs)+1):\n    fuel = 0\n    for crab in crabs:\n        fuel += steps[abs(crab-pos)-1]\n    if fuel < min_fuel:\n        min_fuel = fuel\nprint(min_fuel)",
+        "detail": "2021.7.7.1",
+        "documentation": {}
+    },
+    {
+        "label": "display",
+        "kind": 5,
+        "importPath": "2021.8.8.2",
+        "description": "2021.8.8.2",
+        "peekOfCode": "display = {'0': 'abcefg', '1': 'cf', '2': 'acdeg', '3': 'acdfg', '4': 'bcdf','5': 'abdfg', '6': 'abdefg','7': 'acf', '8': 'abcdefg', '9': 'abcdfg'}\ndisplay_r = {v:k for k, v in display.items()}\nsumma=0\nfor line in lines:\n    inp, outp = line.strip().split('|')\n    inp = [set(x) for x in inp.strip().split()]\n    outp = [set(x) for x in outp.strip().split()]\n    for p in permutations('abcdefg'):\n        mapping = dict(zip(p, list('abcdefg')))\n        for o in inp:",
+        "detail": "2021.8.8.2",
+        "documentation": {}
+    },
+    {
+        "label": "display_r",
+        "kind": 5,
+        "importPath": "2021.8.8.2",
+        "description": "2021.8.8.2",
+        "peekOfCode": "display_r = {v:k for k, v in display.items()}\nsumma=0\nfor line in lines:\n    inp, outp = line.strip().split('|')\n    inp = [set(x) for x in inp.strip().split()]\n    outp = [set(x) for x in outp.strip().split()]\n    for p in permutations('abcdefg'):\n        mapping = dict(zip(p, list('abcdefg')))\n        for o in inp:\n            dig = ''.join(sorted(mapping[c] for c in o))",
+        "detail": "2021.8.8.2",
+        "documentation": {}
+    },
+    {
+        "label": "is_low",
+        "kind": 2,
+        "importPath": "2021.9.9.1",
+        "description": "2021.9.9.1",
+        "peekOfCode": "def is_low(r,c):\n    pt = heights[r][c]\n    try:\n        if heights[r-1][c] <= pt:\n            return False\n    except:\n        pass\n    try:\n        if heights[r+1][c] <= pt:\n            return False",
+        "detail": "2021.9.9.1",
+        "documentation": {}
+    },
+    {
+        "label": "summa",
+        "kind": 5,
+        "importPath": "2021.9.9.1",
+        "description": "2021.9.9.1",
+        "peekOfCode": "summa = 0\nfor r in range(len(heights)):\n    for c in range(len(heights[r])):\n        if is_low(r,c):\n            # print(r,c,': ',heights[r][c])\n            summa += 1 + heights[r][c]\nprint(summa)",
+        "detail": "2021.9.9.1",
+        "documentation": {}
+    },
+    {
+        "label": "is_low",
+        "kind": 2,
+        "importPath": "2021.9.9.2",
+        "description": "2021.9.9.2",
+        "peekOfCode": "def is_low(r,c):\n    pt = heights[r][c]\n    try:\n        if heights[r-1][c] <= pt:\n            return False\n    except:\n        pass\n    try:\n        if heights[r+1][c] <= pt:\n            return False",
+        "detail": "2021.9.9.2",
+        "documentation": {}
+    },
+    {
+        "label": "get_adjacent",
+        "kind": 2,
+        "importPath": "2021.9.9.2",
+        "description": "2021.9.9.2",
+        "peekOfCode": "def get_adjacent(p):\n    adj = []\n    r = p['r']\n    c = p['c']\n    if r > 0:\n        adj.append({'r':r-1,'c':c,'v':heights[r-1][c]})\n    if r < len(heights)-1:\n        adj.append({'r':r+1,'c':c,'v':heights[r+1][c]})\n    if c > 0:\n        adj.append({'r':r,'c':c-1,'v':heights[r][c-1]})",
+        "detail": "2021.9.9.2",
+        "documentation": {}
+    },
+    {
+        "label": "add_to_basin",
+        "kind": 2,
+        "importPath": "2021.9.9.2",
+        "description": "2021.9.9.2",
+        "peekOfCode": "def add_to_basin(caller,p,basin):\n    adj = get_adjacent(p)\n    if caller['v'] <= min([a['v'] for a in adj]):\n        basin.append(p)\n        for a in adj:\n            if a['v'] >= p['v'] and a not in basin and a['v'] < 9:\n                basin = add_to_basin(p,a,basin)\n    return basin\nbasin_lengths = []\nfor p in low_points:",
+        "detail": "2021.9.9.2",
+        "documentation": {}
+    },
+    {
+        "label": "low_points",
+        "kind": 5,
+        "importPath": "2021.9.9.2",
+        "description": "2021.9.9.2",
+        "peekOfCode": "low_points = []\nfor r in range(len(heights)):\n    for c in range(len(heights[r])):\n        if is_low(r,c):\n            low_points.append({'r':r,'c':c,'v':heights[r][c]})\ndef get_adjacent(p):\n    adj = []\n    r = p['r']\n    c = p['c']\n    if r > 0:",
+        "detail": "2021.9.9.2",
+        "documentation": {}
+    },
+    {
+        "label": "basin_lengths",
+        "kind": 5,
+        "importPath": "2021.9.9.2",
+        "description": "2021.9.9.2",
+        "peekOfCode": "basin_lengths = []\nfor p in low_points:\n    basin = [p]\n    for adj in get_adjacent(p):\n        if adj['v'] < 9:\n            basin = add_to_basin(p,adj,basin)\n    basin_lengths.append(len(basin))\nlargest_basins = sorted(basin_lengths,reverse=True)[:3]\nprint(largest_basins[0]*largest_basins[1]*largest_basins[2])",
+        "detail": "2021.9.9.2",
+        "documentation": {}
+    },
+    {
+        "label": "largest_basins",
+        "kind": 5,
+        "importPath": "2021.9.9.2",
+        "description": "2021.9.9.2",
+        "peekOfCode": "largest_basins = sorted(basin_lengths,reverse=True)[:3]\nprint(largest_basins[0]*largest_basins[1]*largest_basins[2])",
+        "detail": "2021.9.9.2",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "f = open('advent1.txt','r')\nlo\n# Part 1\nint_str = [str(i) for i in range(0,10)]\nsum = 0\nfor line in f.readlines():\n    first_int,last_int = None,None\n    for c in line:\n        if c in int_str:\n            if first_int is None:",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "int_str",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "int_str = [str(i) for i in range(0,10)]\nsum = 0\nfor line in f.readlines():\n    first_int,last_int = None,None\n    for c in line:\n        if c in int_str:\n            if first_int is None:\n                first_int = c\n                last_int = c\n            else:",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "sum",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "sum = 0\nfor line in f.readlines():\n    first_int,last_int = None,None\n    for c in line:\n        if c in int_str:\n            if first_int is None:\n                first_int = c\n                last_int = c\n            else:\n                last_int = c",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "sum",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "sum = 0\nnum_str = ['one','two','three','four','five','six','seven','eight','nine']\nnum_str_fixed = ['o1e','t2o','th3ee','f4ur','f5ve','s6x','se7en','ei8ht','n9ne']\nconv_to_ridiculous_half_nums = {num_str[i]:num_str_fixed[i] for i in range(len(num_str))}\nf = open('advent1.txt','r')\nfor line in f.readlines():\n    print(line)\n    first_int,last_int = None,None\n    for dig,num in conv_to_ridiculous_half_nums.items():\n        line = line.replace(dig,num)",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "num_str",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "num_str = ['one','two','three','four','five','six','seven','eight','nine']\nnum_str_fixed = ['o1e','t2o','th3ee','f4ur','f5ve','s6x','se7en','ei8ht','n9ne']\nconv_to_ridiculous_half_nums = {num_str[i]:num_str_fixed[i] for i in range(len(num_str))}\nf = open('advent1.txt','r')\nfor line in f.readlines():\n    print(line)\n    first_int,last_int = None,None\n    for dig,num in conv_to_ridiculous_half_nums.items():\n        line = line.replace(dig,num)\n    for c in line:",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "num_str_fixed",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "num_str_fixed = ['o1e','t2o','th3ee','f4ur','f5ve','s6x','se7en','ei8ht','n9ne']\nconv_to_ridiculous_half_nums = {num_str[i]:num_str_fixed[i] for i in range(len(num_str))}\nf = open('advent1.txt','r')\nfor line in f.readlines():\n    print(line)\n    first_int,last_int = None,None\n    for dig,num in conv_to_ridiculous_half_nums.items():\n        line = line.replace(dig,num)\n    for c in line:\n        if c in int_str:",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "conv_to_ridiculous_half_nums",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "conv_to_ridiculous_half_nums = {num_str[i]:num_str_fixed[i] for i in range(len(num_str))}\nf = open('advent1.txt','r')\nfor line in f.readlines():\n    print(line)\n    first_int,last_int = None,None\n    for dig,num in conv_to_ridiculous_half_nums.items():\n        line = line.replace(dig,num)\n    for c in line:\n        if c in int_str:\n            print(c)",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 5,
+        "importPath": "2023.1.advent1",
+        "description": "2023.1.advent1",
+        "peekOfCode": "f = open('advent1.txt','r')\nfor line in f.readlines():\n    print(line)\n    first_int,last_int = None,None\n    for dig,num in conv_to_ridiculous_half_nums.items():\n        line = line.replace(dig,num)\n    for c in line:\n        if c in int_str:\n            print(c)\n            if first_int is None:",
+        "detail": "2023.1.advent1",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid",
+        "kind": 2,
+        "importPath": "2023.2.advent2",
+        "description": "2023.2.advent2",
+        "peekOfCode": "def is_valid(game,limits):\n    for subset in game.values():\n        for col,val in subset.items():\n            if val > limits[col]:\n                return False\n    return True\nfor id,game in games.items():\n    if is_valid(game,limits):\n        valid_games_id_sum += id\nprint(valid_games_id_sum)",
+        "detail": "2023.2.advent2",
+        "documentation": {}
+    },
+    {
+        "label": "min_cubes_power",
+        "kind": 2,
+        "importPath": "2023.2.advent2",
+        "description": "2023.2.advent2",
+        "peekOfCode": "def min_cubes_power(game):\n    mins = {'red':0,'green':0,'blue':0}\n    for subset in game.values():\n        for col,val in subset.items():\n            mins[col] = max(mins[col],int(val))\n    return mins['red'] * mins['green'] * mins['blue']\npower_sum = 0\nfor id,game in games.items():\n    power_sum += min_cubes_power(game)\nprint(power_sum)",
+        "detail": "2023.2.advent2",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 5,
+        "importPath": "2023.2.advent2",
+        "description": "2023.2.advent2",
+        "peekOfCode": "f = open('advent2.txt','r')\n# Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green\n# Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue\n# Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red\n# Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red\n# Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green\ngames = {}\nfor g in f.readlines():\n    id = int(g.split(' ')[1].replace(':',''))\n    games[id] = {}",
+        "detail": "2023.2.advent2",
+        "documentation": {}
+    },
+    {
+        "label": "games",
+        "kind": 5,
+        "importPath": "2023.2.advent2",
+        "description": "2023.2.advent2",
+        "peekOfCode": "games = {}\nfor g in f.readlines():\n    id = int(g.split(' ')[1].replace(':',''))\n    games[id] = {}\n    game = g.split(':')[-1].strip()\n    for isub,subset in enumerate(game.split(';')):\n        subset = subset.strip()\n        # 6 red, 1 blue, 3 green\n        colors = {}\n        for item in subset.split(','):",
+        "detail": "2023.2.advent2",
+        "documentation": {}
+    },
+    {
+        "label": "limits",
+        "kind": 5,
+        "importPath": "2023.2.advent2",
+        "description": "2023.2.advent2",
+        "peekOfCode": "limits = {'red':12,'green':13,'blue':14}\nvalid_games_id_sum = 0\ndef is_valid(game,limits):\n    for subset in game.values():\n        for col,val in subset.items():\n            if val > limits[col]:\n                return False\n    return True\nfor id,game in games.items():\n    if is_valid(game,limits):",
+        "detail": "2023.2.advent2",
+        "documentation": {}
+    },
+    {
+        "label": "valid_games_id_sum",
+        "kind": 5,
+        "importPath": "2023.2.advent2",
+        "description": "2023.2.advent2",
+        "peekOfCode": "valid_games_id_sum = 0\ndef is_valid(game,limits):\n    for subset in game.values():\n        for col,val in subset.items():\n            if val > limits[col]:\n                return False\n    return True\nfor id,game in games.items():\n    if is_valid(game,limits):\n        valid_games_id_sum += id",
+        "detail": "2023.2.advent2",
+        "documentation": {}
+    },
+    {
+        "label": "power_sum",
+        "kind": 5,
+        "importPath": "2023.2.advent2",
+        "description": "2023.2.advent2",
+        "peekOfCode": "power_sum = 0\nfor id,game in games.items():\n    power_sum += min_cubes_power(game)\nprint(power_sum)",
+        "detail": "2023.2.advent2",
+        "documentation": {}
+    },
+    {
+        "label": "fix_symbols",
+        "kind": 2,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "def fix_symbols(x):\n    if x == '.':\n        return ' '\n    elif x in integers:\n        return x\n    else:\n        return 'X'\nm = []\nfor line in f.readlines():\n    m.append([fix_symbols(x) for x in line.strip()])",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "find_nums",
+        "kind": 2,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "def find_nums(row):\n    nums = {}\n    current = ''\n    for i,e in enumerate(row):\n        if e in integers:\n            if current == '':\n                start = i\n            current += e\n        elif current != '':\n            nums[(start,i)] = int(current)",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "adjacent_symbol",
+        "kind": 2,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "def adjacent_symbol(row,start,end):\n    total_checks = 0\n    for i in range(max(0,row-1),min(row+2,len(m))):\n        for j in range(max(0,start-1),min(end+1,len(m[0]))):\n            total_checks += 1\n            if m[i][j] == 'X':\n                return True\n    return False\n# 1. find numbers with coordinates\n# 2. check whether they have a symbol adjacent",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "fix_symbols",
+        "kind": 2,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "def fix_symbols(x):\n    if x == '*':\n        return '*'\n    elif x == '.':\n        return ' '\n    elif x in integers:\n        return x\n    else:\n        return 'X'\nm = []",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "find_nums",
+        "kind": 2,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "def find_nums(row):\n    nums = {}\n    current = ''\n    for i,e in enumerate(row):\n        if e in integers:\n            if current == '':\n                start = i\n            current += e\n        elif current != '':\n            nums[(start,i)] = int(current)",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "adjacent_symbol",
+        "kind": 2,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "def adjacent_symbol(row,start,end):\n    for i in range(max(0,row-1),min(row+2,len(m))):\n        for j in range(max(0,start-1),min(end+1,len(m[0]))):\n            if m[i][j] == 'X':\n                return True\n    return False\ndef adjacent_nums(nums,row,col):\n    adj_nums = []\n    used = []\n    for i in range(max(0,row-1),min(row+2,len(m))):",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "adjacent_nums",
+        "kind": 2,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "def adjacent_nums(nums,row,col):\n    adj_nums = []\n    used = []\n    for i in range(max(0,row-1),min(row+2,len(m))):\n        for j in range(max(0,col-1),min(col+2,len(m[0]))):\n            for start,end in nums[i].keys():\n                if start <= j <= end-1:\n                    if (i,start,end) not in used:\n                        adj_nums.append(nums[i][(start,end)])\n                        used.append((i,start,end))",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "f = open('advent3.txt','r')\n# What is the sum of all of the part numbers in the engine schematic?\nintegers = [str(i) for i in range(0,10)]\ndef fix_symbols(x):\n    if x == '.':\n        return ' '\n    elif x in integers:\n        return x\n    else:\n        return 'X'",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "integers",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "integers = [str(i) for i in range(0,10)]\ndef fix_symbols(x):\n    if x == '.':\n        return ' '\n    elif x in integers:\n        return x\n    else:\n        return 'X'\nm = []\nfor line in f.readlines():",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "m",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "m = []\nfor line in f.readlines():\n    m.append([fix_symbols(x) for x in line.strip()])\ndef find_nums(row):\n    nums = {}\n    current = ''\n    for i,e in enumerate(row):\n        if e in integers:\n            if current == '':\n                start = i",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "sum",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "sum = 0\nfor i,row in enumerate(m):\n    nums = find_nums(row)\n    for loc,n in nums.items():\n        if adjacent_symbol(i,loc[0],loc[1]):\n            sum += n\nprint(sum)\nf = open('advent3.txt','r')\n# What is the sum of all of the part numbers in the engine schematic?\nintegers = [str(i) for i in range(0,10)]",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "f = open('advent3.txt','r')\n# What is the sum of all of the part numbers in the engine schematic?\nintegers = [str(i) for i in range(0,10)]\ndef fix_symbols(x):\n    if x == '*':\n        return '*'\n    elif x == '.':\n        return ' '\n    elif x in integers:\n        return x",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "integers",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "integers = [str(i) for i in range(0,10)]\ndef fix_symbols(x):\n    if x == '*':\n        return '*'\n    elif x == '.':\n        return ' '\n    elif x in integers:\n        return x\n    else:\n        return 'X'",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "m",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "m = []\nfor line in f.readlines():\n    m.append([fix_symbols(x) for x in line.strip()])\ndef find_nums(row):\n    nums = {}\n    current = ''\n    for i,e in enumerate(row):\n        if e in integers:\n            if current == '':\n                start = i",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "nums = {}\nfor i,row in enumerate(m):\n    nums[i] = find_nums(row)\ngear_ratio_sum = 0\nfor i,row in enumerate(m):\n    for ie,e in enumerate(row):\n        if e == '*':\n            # find adjacent numbers\n            adj_nums = adjacent_nums(nums,i,ie)\n            if len(adj_nums) == 2:",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "gear_ratio_sum",
+        "kind": 5,
+        "importPath": "2023.3.advent3",
+        "description": "2023.3.advent3",
+        "peekOfCode": "gear_ratio_sum = 0\nfor i,row in enumerate(m):\n    for ie,e in enumerate(row):\n        if e == '*':\n            # find adjacent numbers\n            adj_nums = adjacent_nums(nums,i,ie)\n            if len(adj_nums) == 2:\n                gear_ratio_sum += adj_nums[0] * adj_nums[1]\nprint(gear_ratio_sum)",
+        "detail": "2023.3.advent3",
+        "documentation": {}
+    },
+    {
+        "label": "solver",
+        "kind": 2,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "def solver(obj):\n\twinnersMatrix = []\n\tscore = 0\n\tfor tuple in obj.values():\n\t\twinnersList = []\n\t\tfor n in tuple[1]:\n\t\t\tif n in tuple[0]:\n\t\t\t\twinnersList.append(n)\n\t\twinnersMatrix.append(winnersList)\n\t\tscore += 2**(len(winnersList)-1) if len(winnersList) > 0 else 0",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "solver2",
+        "kind": 2,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "def solver2(cards,matches):\n\tcard_cts = {card_id:1 for card_id in cards.keys()}\n\tfor card_id in cards.keys():\n\t\t# get the number of matches\n\t\tn_matches = matches[card_id]\n\t\tfor i in range(n_matches):\n\t\t\tcard_cts[card_id+i+1] = card_cts.get(card_id+i+1,0) + card_cts[card_id]\n\t# add up all the cards\n\treturn sum(card_cts.values())\nprint(solver2(cards,matches))",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "cards",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "cards = {}\nfor line in open('advent4.txt','r').readlines():\n\t# print(line.split(':')[0].split(' ')[-1])\n\tcard_id = int(line.split(':')[0].split(' ')[-1])\n\twinners = [int(x) for x in line.split(':')[1].split('|')[0].strip().split(' ') if x != '']\n\tnumbers = [int(x.strip()) for x in line.split(':')[1].split('|')[1].strip().split(' ') if x != '']\n\tcards[card_id] = (winners, numbers)\n# Example:\n# cards = {\n# \t1: ([41,48,83],[83,86,6]),",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\tcard_id",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\tcard_id = int(line.split(':')[0].split(' ')[-1])\n\twinners = [int(x) for x in line.split(':')[1].split('|')[0].strip().split(' ') if x != '']\n\tnumbers = [int(x.strip()) for x in line.split(':')[1].split('|')[1].strip().split(' ') if x != '']\n\tcards[card_id] = (winners, numbers)\n# Example:\n# cards = {\n# \t1: ([41,48,83],[83,86,6]),\n# \t2: ([77,37,38],[97,27,13]),\n# }\n# returns list of array of winning numbers",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\twinners",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\twinners = [int(x) for x in line.split(':')[1].split('|')[0].strip().split(' ') if x != '']\n\tnumbers = [int(x.strip()) for x in line.split(':')[1].split('|')[1].strip().split(' ') if x != '']\n\tcards[card_id] = (winners, numbers)\n# Example:\n# cards = {\n# \t1: ([41,48,83],[83,86,6]),\n# \t2: ([77,37,38],[97,27,13]),\n# }\n# returns list of array of winning numbers\ndef solver(obj):",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\tnumbers",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\tnumbers = [int(x.strip()) for x in line.split(':')[1].split('|')[1].strip().split(' ') if x != '']\n\tcards[card_id] = (winners, numbers)\n# Example:\n# cards = {\n# \t1: ([41,48,83],[83,86,6]),\n# \t2: ([77,37,38],[97,27,13]),\n# }\n# returns list of array of winning numbers\ndef solver(obj):\n\twinnersMatrix = []",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\tcards[card_id]",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\tcards[card_id] = (winners, numbers)\n# Example:\n# cards = {\n# \t1: ([41,48,83],[83,86,6]),\n# \t2: ([77,37,38],[97,27,13]),\n# }\n# returns list of array of winning numbers\ndef solver(obj):\n\twinnersMatrix = []\n\tscore = 0",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\twinnersMatrix",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\twinnersMatrix = []\n\tscore = 0\n\tfor tuple in obj.values():\n\t\twinnersList = []\n\t\tfor n in tuple[1]:\n\t\t\tif n in tuple[0]:\n\t\t\t\twinnersList.append(n)\n\t\twinnersMatrix.append(winnersList)\n\t\tscore += 2**(len(winnersList)-1) if len(winnersList) > 0 else 0\n\t# return score",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\tscore",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\tscore = 0\n\tfor tuple in obj.values():\n\t\twinnersList = []\n\t\tfor n in tuple[1]:\n\t\t\tif n in tuple[0]:\n\t\t\t\twinnersList.append(n)\n\t\twinnersMatrix.append(winnersList)\n\t\tscore += 2**(len(winnersList)-1) if len(winnersList) > 0 else 0\n\t# return score\n\treturn {card_id:len(winners) for card_id, winners in zip(obj.keys(), winnersMatrix)}",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\t\twinnersList",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\t\twinnersList = []\n\t\tfor n in tuple[1]:\n\t\t\tif n in tuple[0]:\n\t\t\t\twinnersList.append(n)\n\t\twinnersMatrix.append(winnersList)\n\t\tscore += 2**(len(winnersList)-1) if len(winnersList) > 0 else 0\n\t# return score\n\treturn {card_id:len(winners) for card_id, winners in zip(obj.keys(), winnersMatrix)}\n# print(solver(cards))\nmatches = solver(cards)",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "matches",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "matches = solver(cards)\nprint(matches)\n# --- Part Two ---\n# Just as you're about to report your findings to the Elf, one of you realizes that the rules have actually been printed on the back of every card this whole time.\n# There's no such thing as \"points\". Instead, scratchcards only cause you to win more scratchcards equal to the number of winning numbers you have.\n# Specifically, you win copies of the scratchcards below the winning card equal to the number of matches. So, if card 10 were to have 5 matching numbers, you would win one copy each of cards 11, 12, 13, 14, and 15.\n# Copies of scratchcards are scored like normal scratchcards and have the same card number as the card they copied. So, if you win a copy of card 10 and it has 5 matching numbers, it would then win a copy of the same cards that the original card 10 won: cards 11, 12, 13, 14, and 15. This process repeats until none of the copies cause you to win any more cards. (Cards will never make you copy a card past the end of the table.)\n# This time, the above example goes differently:\n# Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53\n# Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\tcard_cts",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\tcard_cts = {card_id:1 for card_id in cards.keys()}\n\tfor card_id in cards.keys():\n\t\t# get the number of matches\n\t\tn_matches = matches[card_id]\n\t\tfor i in range(n_matches):\n\t\t\tcard_cts[card_id+i+1] = card_cts.get(card_id+i+1,0) + card_cts[card_id]\n\t# add up all the cards\n\treturn sum(card_cts.values())\nprint(solver2(cards,matches))",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tn_matches",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\t\tn_matches = matches[card_id]\n\t\tfor i in range(n_matches):\n\t\t\tcard_cts[card_id+i+1] = card_cts.get(card_id+i+1,0) + card_cts[card_id]\n\t# add up all the cards\n\treturn sum(card_cts.values())\nprint(solver2(cards,matches))",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tcard_cts[card_id+i+1]",
+        "kind": 5,
+        "importPath": "2023.4.advent4",
+        "description": "2023.4.advent4",
+        "peekOfCode": "\t\t\tcard_cts[card_id+i+1] = card_cts.get(card_id+i+1,0) + card_cts[card_id]\n\t# add up all the cards\n\treturn sum(card_cts.values())\nprint(solver2(cards,matches))",
+        "detail": "2023.4.advent4",
+        "documentation": {}
+    },
+    {
+        "label": "forwards",
+        "kind": 2,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "def forwards(map,number):\n\t# while number > map[i+1][0] and i+1 < len(map) - 1:\n\t# \ti += 1\n\t# dist = number - map[i][0]\n\t# val = map[i][1] + dist\n\t# find the range this fits into\n\tfor i in range(len(map)):\n\t\tif number >= map[i][1] and number < map[i][1] + map[i][2]:\n\t\t\t# print(map[i],number,val,i)\n\t\t\treturn map[i][0] + (number - map[i][1])",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\tmaps",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\tmaps = ['seed-to-soil','soil-to-fertilizer','fertilizer-to-water','water-to-light','light-to-temperature','temperature-to-humidity','humidity-to-location']\n\tseeds = [int(x) for x in f.readline().split(':')[-1].strip().split(' ') if x != '']\n\tprint(seeds)\n\tmapping_dict = {\n\t\t'seeds':seeds\n\t}\n\tactive_map = ''\n\tfor line in f.readlines():\n\t\tif active_map == '':\n\t\t\tif line.split(' ')[0] in maps:",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\tseeds",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\tseeds = [int(x) for x in f.readline().split(':')[-1].strip().split(' ') if x != '']\n\tprint(seeds)\n\tmapping_dict = {\n\t\t'seeds':seeds\n\t}\n\tactive_map = ''\n\tfor line in f.readlines():\n\t\tif active_map == '':\n\t\t\tif line.split(' ')[0] in maps:\n\t\t\t\tactive_map = line.split(' ')[0].strip()",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\tmapping_dict",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\tmapping_dict = {\n\t\t'seeds':seeds\n\t}\n\tactive_map = ''\n\tfor line in f.readlines():\n\t\tif active_map == '':\n\t\t\tif line.split(' ')[0] in maps:\n\t\t\t\tactive_map = line.split(' ')[0].strip()\n\t\t\t\tprint(active_map)\n\t\telse:",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\tactive_map",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\tactive_map = ''\n\tfor line in f.readlines():\n\t\tif active_map == '':\n\t\t\tif line.split(' ')[0] in maps:\n\t\t\t\tactive_map = line.split(' ')[0].strip()\n\t\t\t\tprint(active_map)\n\t\telse:\n\t\t\tif line.strip() == '':\n\t\t\t\tactive_map = ''\n\t\t\telse:",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tactive_map",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\t\t\t\tactive_map = line.split(' ')[0].strip()\n\t\t\t\tprint(active_map)\n\t\telse:\n\t\t\tif line.strip() == '':\n\t\t\t\tactive_map = ''\n\t\t\telse:\n\t\t\t\tif active_map not in mapping_dict:\n\t\t\t\t\tmapping_dict[active_map] = []\n\t\t\t\tmapping_dict[active_map].append([int(x) for x in line.strip().split(' ') if x != ''])\n\tprint(mapping_dict)",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tactive_map",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\t\t\t\tactive_map = ''\n\t\t\telse:\n\t\t\t\tif active_map not in mapping_dict:\n\t\t\t\t\tmapping_dict[active_map] = []\n\t\t\t\tmapping_dict[active_map].append([int(x) for x in line.strip().split(' ') if x != ''])\n\tprint(mapping_dict)\n\t# save to json\n\twith open('advent5_input.json','w') as json_file:\n\t\tjson.dump(mapping_dict,json_file)\n# for map in list(mapping_dict.keys())[1:]:",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tmapping_dict[active_map]",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\t\t\t\t\tmapping_dict[active_map] = []\n\t\t\t\tmapping_dict[active_map].append([int(x) for x in line.strip().split(' ') if x != ''])\n\tprint(mapping_dict)\n\t# save to json\n\twith open('advent5_input.json','w') as json_file:\n\t\tjson.dump(mapping_dict,json_file)\n# for map in list(mapping_dict.keys())[1:]:\n# \t# insert a 0,0 at the beginning\n# \t# the 3rd value should be the same as the 2nd value\n# \t# if there isn't a 0 in column 1:",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "loc_vals",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "loc_vals = []\nfor seed in mapping_dict['seeds']:\n\tval = seed\n\tfor map in list(mapping_dict.keys())[1:]:\n\t\tprint(map,val,end=': ')\n\t\tval = forwards(mapping_dict[map],val)\n\tloc_vals.append(val)\n\tprint(loc_vals)\nprint(min(loc_vals))\n# Part 2",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\tval",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\tval = seed\n\tfor map in list(mapping_dict.keys())[1:]:\n\t\tprint(map,val,end=': ')\n\t\tval = forwards(mapping_dict[map],val)\n\tloc_vals.append(val)\n\tprint(loc_vals)\nprint(min(loc_vals))\n# Part 2\n# This is currently extremely inefficient and naive\n# Need to refactor to use entire subranges of seeds rather than individual seeds",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tval",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\t\tval = forwards(mapping_dict[map],val)\n\tloc_vals.append(val)\n\tprint(loc_vals)\nprint(min(loc_vals))\n# Part 2\n# This is currently extremely inefficient and naive\n# Need to refactor to use entire subranges of seeds rather than individual seeds\nloc_vals = []\nseeds_considered = 0\nfor si in range(0,len(mapping_dict['seeds']),2):",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "loc_vals",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "loc_vals = []\nseeds_considered = 0\nfor si in range(0,len(mapping_dict['seeds']),2):\n\tseed_start,seed_len = mapping_dict['seeds'][si:si+2]\n\tfor seed in range(seed_start,seed_start+seed_len):\n\t\tseeds_considered += 1\n\t\tval = seed\n\t\tfor map in list(mapping_dict.keys())[1:]:\n\t\t\t# print(map,val,end=': ')\n\t\t\tval = forwards(mapping_dict[map],val)",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "seeds_considered",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "seeds_considered = 0\nfor si in range(0,len(mapping_dict['seeds']),2):\n\tseed_start,seed_len = mapping_dict['seeds'][si:si+2]\n\tfor seed in range(seed_start,seed_start+seed_len):\n\t\tseeds_considered += 1\n\t\tval = seed\n\t\tfor map in list(mapping_dict.keys())[1:]:\n\t\t\t# print(map,val,end=': ')\n\t\t\tval = forwards(mapping_dict[map],val)\n\t\tloc_vals.append(val)",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\tseed_start,seed_len",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\tseed_start,seed_len = mapping_dict['seeds'][si:si+2]\n\tfor seed in range(seed_start,seed_start+seed_len):\n\t\tseeds_considered += 1\n\t\tval = seed\n\t\tfor map in list(mapping_dict.keys())[1:]:\n\t\t\t# print(map,val,end=': ')\n\t\t\tval = forwards(mapping_dict[map],val)\n\t\tloc_vals.append(val)\nprint(min(loc_vals))",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tval",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\t\tval = seed\n\t\tfor map in list(mapping_dict.keys())[1:]:\n\t\t\t# print(map,val,end=': ')\n\t\t\tval = forwards(mapping_dict[map],val)\n\t\tloc_vals.append(val)\nprint(min(loc_vals))",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tval",
+        "kind": 5,
+        "importPath": "2023.5.advent5",
+        "description": "2023.5.advent5",
+        "peekOfCode": "\t\t\tval = forwards(mapping_dict[map],val)\n\t\tloc_vals.append(val)\nprint(min(loc_vals))",
+        "detail": "2023.5.advent5",
+        "documentation": {}
+    },
+    {
+        "label": "n1",
+        "kind": 5,
+        "importPath": "2024.1.1",
+        "description": "2024.1.1",
+        "peekOfCode": "n1 = sorted(n1)\nn2 = sorted(n2)\ndist_sum = 0\nfor i in range(len(n1)):\n    dist_sum += abs(int(n1[i])-int(n2[i]))\nprint(dist_sum)\n#part 2\ndict = {}\ndict_sum = 0\nfor i in range(len(n1)):",
+        "detail": "2024.1.1",
+        "documentation": {}
+    },
+    {
+        "label": "n2",
+        "kind": 5,
+        "importPath": "2024.1.1",
+        "description": "2024.1.1",
+        "peekOfCode": "n2 = sorted(n2)\ndist_sum = 0\nfor i in range(len(n1)):\n    dist_sum += abs(int(n1[i])-int(n2[i]))\nprint(dist_sum)\n#part 2\ndict = {}\ndict_sum = 0\nfor i in range(len(n1)):\n    if n1[i] not in dict:",
+        "detail": "2024.1.1",
+        "documentation": {}
+    },
+    {
+        "label": "dist_sum",
+        "kind": 5,
+        "importPath": "2024.1.1",
+        "description": "2024.1.1",
+        "peekOfCode": "dist_sum = 0\nfor i in range(len(n1)):\n    dist_sum += abs(int(n1[i])-int(n2[i]))\nprint(dist_sum)\n#part 2\ndict = {}\ndict_sum = 0\nfor i in range(len(n1)):\n    if n1[i] not in dict:\n        dict[n1[i]] = int(n1[i]) * len([x for x in n2 if x == n1[i]])",
+        "detail": "2024.1.1",
+        "documentation": {}
+    },
+    {
+        "label": "dict",
+        "kind": 5,
+        "importPath": "2024.1.1",
+        "description": "2024.1.1",
+        "peekOfCode": "dict = {}\ndict_sum = 0\nfor i in range(len(n1)):\n    if n1[i] not in dict:\n        dict[n1[i]] = int(n1[i]) * len([x for x in n2 if x == n1[i]])\n    dict_sum += dict[n1[i]]\nprint(dict_sum)",
+        "detail": "2024.1.1",
+        "documentation": {}
+    },
+    {
+        "label": "dict_sum",
+        "kind": 5,
+        "importPath": "2024.1.1",
+        "description": "2024.1.1",
+        "peekOfCode": "dict_sum = 0\nfor i in range(len(n1)):\n    if n1[i] not in dict:\n        dict[n1[i]] = int(n1[i]) * len([x for x in n2 if x == n1[i]])\n    dict_sum += dict[n1[i]]\nprint(dict_sum)",
+        "detail": "2024.1.1",
+        "documentation": {}
+    }
+]
